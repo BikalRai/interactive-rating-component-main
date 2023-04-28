@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --primary-orange: hsl(25, 97%, 53%);
+
+    /* neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(217, 12%, 63%);
+    --medium-gray: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+
+    /* shadow for button */
+    --shadow-color: hsla(216, 12%, 8%, 0.6);
+}
+
+* {
+    font-family: 'Overpass', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    padding: 1em;
+}
+
+p {
+    font-size: 15px;
+    color: var(--medium-gray);
+}
+
+.container_front, .container_back {
+    background-color: var(--dark-blue);
+    display: grid;
+    gap: 1.5rem;
+    margin: 6rem auto;
+    border-radius: 1em;
+    color: var(--white);
+    max-width: 380px;
+}
+
+/* front */
+.container_front {
+    padding: 2em;
+}
+
+.star_icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    box-shadow: 0px 0px 10px 1px var(--shadow-color);
+    border-radius: 100%;
+}
+
+.option_btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option__btn {
+    background-color: hsl(213, 19.2%, 20.4%);
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    color: var(--medium-gray);
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color .2s, color .2s;
+}
+
+.selected_btn {
+    background-color: var(--primary-orange);
+    color: var(--white);
+}
+
+.option__btn:hover {
+    background-color: var(--light-gray);
+    color: var(--white);
+}
+
+.btn_submit {
+    background-color: var(--primary-orange);
+    border: none;
+    border-radius: 2em;
+    color: var(--white);
+    cursor: pointer;
+    padding: 1em;
+    transition: background .2s, color .2s;
+}
+
+
+.btn_submit:active, .btn_submit:hover {
+    background-color: var(--white);
+    color: var(--primary-orange);
+}
+
+/* back */
+.container_back {
+    display: none;
+    justify-items: center;
+    padding: 3em 1em;
+    position: relative;
+}
+
+.selected {
+    background-color: hsl(213, 19.2%, 20.4%);
+    padding: 0.25em 1em;
+    color: var(--primary-orange);
+    border: none;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.thank {
+    font-size: 1.5rem;
+}
+
+.appreciate {
+    text-align: center;
+    padding: 0.036em;
+}
+
+.btn_back {
+    background-color: var(--dark-blue);
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    position: absolute;
+    top: 5%;
+    right: 10%;
+
+    transition: background .2s;
+}
+
+.btn_back > img {
+    height: 100%;
+    width: 100%;
+}
+
+.btn_back:hover {
+    background-color: var(--white);
+}
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; color: var(--white); }
+.attribution a { color: hsl(228, 45%, 44%); }
